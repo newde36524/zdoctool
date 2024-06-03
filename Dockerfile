@@ -1,7 +1,3 @@
-FROM scratch
-
-WORKDIR /app
-COPY ./etc /app/etc
-COPY ./zdoctool /app/doctool
+FROM 718114245/zdoctool
 EXPOSE 9999
-CMD ["./doctool", "-f", "etc/doctool.yaml"]
+CMD ["/app/doctool", "-f", "/app/etc/doctool.yaml"]
